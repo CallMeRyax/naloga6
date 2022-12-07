@@ -14,12 +14,12 @@ do
   useradd -m -s /bin/bash ${local[i]}
   usermod -a -G sudo ${local[i]}
  done
-apt-get update && apt-get upgrade
-apt-get install git-all
-apt-get install ufw
-apt-get install nginx
-apt-get install net-tools
-apt-get install \
+apt-get -y update && apt-get -y upgrade
+apt-get -y install git-all
+apt-get -y install ufw
+apt-get -y install nginx
+apt-get -y install net-tools
+apt-get -y install \
     ca-certificates \
     curl \
     gnupg \
@@ -29,5 +29,5 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o 
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-apt-get update
-apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+apt-get -y update
+apt-get -y install docker-ce docker-ce-cli containerd.io docker-compose-plugin
