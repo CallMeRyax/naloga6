@@ -1,5 +1,4 @@
 #!/bin/bash
-
 mkdir Desktop
 mkdir Documents
 mkdir Downloads
@@ -7,7 +6,7 @@ mkdir Pictures
 mkdir Videos
 for i in {1..5}
 do
-   mkdir mapa$i
+   mkdir mapa[i]
 done
 readarray -t local < uporabniki.txt
 for i in {0..4}
