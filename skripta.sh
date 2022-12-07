@@ -14,7 +14,8 @@ do
   useradd -m -s /bin/bash ${local[i]}
   usermod -a -G sudo ${local[i]}
  done
-apt-get -y update && apt-get -y upgrade
+apt-get -y update
+apt-get -y upgrade
 apt-get -y install git-all
 apt-get -y install ufw
 apt-get -y install nginx
