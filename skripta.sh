@@ -8,6 +8,7 @@ for i in {1..5}
 do
    mkdir mapa$i
 done
+wget https://raw.githubusercontent.com/CallMeRyax/naloga6/main/uporabniki.txt
 readarray -t local < uporabniki.txt
 for i in {0..4}
 do
